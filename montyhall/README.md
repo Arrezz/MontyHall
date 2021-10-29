@@ -14,6 +14,6 @@ Ensure that you have a JDK installed on your machine as well as Maven.
 
 ## Interacting with the application
 
-The application will ask you for two different values.
+The application will ask you for two different integer values.
 The first value will be the amount of simulations to do both for the no-swap strategy and the swap strategy.
 The second value will be the amount of doors available in the simulation.
