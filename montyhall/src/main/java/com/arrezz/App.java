@@ -45,16 +45,17 @@ public class App {
 
             montyHallProblem.reset();
 
-            noSwapSimulationResult = montyHallProblem.simulateGame(true);
-
             if (swapSimulationResult) {
                 successSwapSimulationCounter++;
             }
+
+            noSwapSimulationResult = montyHallProblem.simulateGame(true);
+
+            montyHallProblem.reset();
+
             if (noSwapSimulationResult) {
                 successNoSwapSimulationCounter++;
             }
-
-            montyHallProblem.reset();
         }
 
         System.out.println("These are the results of the simulation for swapping!");

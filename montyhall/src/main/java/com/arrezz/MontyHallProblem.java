@@ -8,13 +8,21 @@ public class MontyHallProblem {
 
     private final int doorAmount;
     private int winningDoor;
-    private int initialDoorToBeChosen;
+    private int chosenDoor;
 
 
-    public MontyHallProblem(int doorAmount, int winningDoor, int initialDoorToBeChosen) {
+    public MontyHallProblem(int doorAmount, int winningDoor, int chosenDoor) {
         this.doorAmount = doorAmount;
         this.winningDoor = winningDoor;
-        this.initialDoorToBeChosen = initialDoorToBeChosen;
+        this.chosenDoor = chosenDoor;
+    }
+
+    public int getWinningDoor() {
+        return winningDoor;
+    }
+
+    public int getChosenDoor() {
+        return chosenDoor;
     }
 
     public void setWinningDoor(int winningDoor) {
@@ -22,7 +30,7 @@ public class MontyHallProblem {
     }
 
     public void setChosenDoor(int chosenDoor) {
-        this.initialDoorToBeChosen = chosenDoor;
+        this.chosenDoor = chosenDoor;
     }
 
     public boolean simulateGame(boolean swapDoor) {
@@ -38,9 +46,9 @@ public class MontyHallProblem {
         }
 
         if (swapDoor) {
-            return !doorList.get(initialDoorToBeChosen).isWinner();
+            return !doorList.get(chosenDoor).isWinner();
         } else {
-            return doorList.get(initialDoorToBeChosen).isWinner();
+            return doorList.get(chosenDoor).isWinner();
         }
     }
 
